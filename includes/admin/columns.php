@@ -22,8 +22,8 @@ function r_manage_recipe_columns($column, $post_id)
             echo isset($recipe_data['rating_count']) ? $recipe_data['rating_count'] : 0;
             break;
         case 'rating':
-        $recipe_data    = get_post_meta($post_id, 'recipe_data', true);
-        echo isset($recipe_data['rating']) ? $recipe_data['rating'] : 'N/A';
+            $recipe_data    = get_post_meta($post_id, 'recipe_data', true);
+            echo isset($recipe_data['rating']) ? $recipe_data['rating'] : 'N/A';
             break;
         default:
             break;

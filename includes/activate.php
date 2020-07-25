@@ -19,4 +19,8 @@ function r_activate_plugin()
 
     require(ABSPATH . "/wp-admin/includes/upgrade.php");
     dbDelta($createSQL);
+
+    /* SCHEDULE A CRON JOB FOR SELECTING RECIPE OF THE DAY */
+    // (first time this event occurs, recurrence, hook that triggers)
+    wp_schedule_event(time(), 'daily', 'r_daily_recipe_hook');
 }
