@@ -17,7 +17,8 @@ function r_enqueue_scripts()
 
     // WP doesn't provide an AJAX URL variable so we need to generate one and pass it to JS files with this function
     wp_localize_script('r_main', 'recipe_obj', [ // WP recommends to use this function to provide a URL to its AJAX page handler
-        'ajax_url' => admin_url('admin-ajax.php') // all AJAX should be sent to the admin-ajax.php
+        'ajax_url' => admin_url('admin-ajax.php'), // all AJAX should be sent to the admin-ajax.php
+        'home_url' => home_url('/')
     ]);
 
     wp_enqueue_script('r_rateit');
