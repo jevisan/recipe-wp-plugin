@@ -21,7 +21,7 @@ NONCE_FIELD_PH
     </div>
 </div>
 
-<div class="col_two_third col_last nobottommargin">
+<div class="col_two_third col_last nobottommargin" SHOW_REG_FORM>
     <h3>Don't have an Account? Register Now.</h3>
     <div id="register-status"></div>
     <form id="register-form" class="nobottommargin">
@@ -49,14 +49,14 @@ NONCE_FIELD_PH
         </div>
         <div class="col_half col_last">
             <label for="register-form-repassword">Re-enter Password:</label>
-            <input type="password" id="register-form-re password" class="form-control"/>
+            <input type="password" id="register-form-repassword" class="form-control"/>
         </div>
 
         <div class="clear"></div>
 
         <div class="col_full nobottommargin">
             <button class="button button-3d nomargin"
-                id="login-form-submit">Register Now</button>
+                >Register Now</button>
         </div>
     </form>
 </div>
