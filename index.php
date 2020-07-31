@@ -36,6 +36,7 @@ include('includes/shortcodes/auth-form.php');
 include('process/create-account.php');
 include('process/login.php');
 include('includes/shortcodes/auth-alt-form.php');
+include('includes/front/logout-link.php');
 
 // Hooks
 register_activation_hook(__FILE__, 'r_activate_plugin');
@@ -57,6 +58,7 @@ add_action('wp_ajax_nopriv_recipe_user_login', 'recipe_user_login');
 // add_filter('authenticate', 'wp_authenticate_spam_check', 99);
 
 add_filter('authenticate', 'r_alt_authenticate', 100, 3);
+add_filter('wp_nav_menu_secondary_items', 'ju_new_nav_menu_items', 999);
 
 // Shortcodes
 add_shortcode('recipe_creator', 'r_recipe_creator_shortcode');
